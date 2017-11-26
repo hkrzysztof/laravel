@@ -12,6 +12,8 @@
         <thead>
             <tr>
                 <th>Id</th>
+                <th>Link to post</th>
+                <th>Comments</th>
                 <th>Author</th>
                 <th>Photo Id</th>
                 <th>Title</th>
@@ -26,8 +28,10 @@
                 @foreach($posts as $post)
                 <tr>
                     <td>{{$post->id}}</td>
+                    <td><a href="{{route('home.post', $post->id)}}">View</a></td>
+                    <td><a href="{{route('admin.comments.show', $post->id)}}">View all</a></td>
                     <td>{{$post->user->name}}</td>
-                    <td><img height="50" src="{{$post->photo ? $post->photo->file : 'http://via.placeholder.com/50x50'}}" alt="post_photo" ></td>
+                    <td><img height="50" src="{{$post->photo ? $post->photo->file : 'http://via.placeholder.com/50x50'}}" alt="post_photo"></td>
                     <td><a href="{{route('admin.posts.edit', $post->id)}}">{{$post->title}}</a></td>
                     <td>{{str_limit($post->body, 20)}}</td>
                     <td>{{$post->category_id ? $post->category->name : 'No category'}}</td>

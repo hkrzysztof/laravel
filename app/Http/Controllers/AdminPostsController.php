@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Category;
+use App\Comment;
 use App\Http\Requests\PostCreateRequest;
 use App\Photo;
 use App\Post;
@@ -126,5 +127,12 @@ class AdminPostsController extends Controller
         Session::flash('deleted_post', 'The post has been deleted');
 
         return redirect('/admin/posts');
+    }
+
+    public function post($id){
+        $post = Post::findOrFail($id);
+        $categories = Category::all();
+        $comments = $post->comments()->whereIsActive(1)->get();
+        return view('post', compact('post', 'categories', 'comments'));
     }
 }
