@@ -23,7 +23,7 @@
                 @foreach($comments as $comment)
             <tr>
                 <td>{{$comment->id}}</td>
-                <td><a href="{{route('home.post', $comment->post_id)}}">{{$comment->post_id}}</a></td>
+                <td><a href="{{route('home.post', $comment->post->slug)}}">{{$comment->post_id}}</a></td>
                 <td>{{$comment->author}}</td>
                 <td><img height="50" src="{{$comment->photo ? $comment->photo : 'http://via.placeholder.com/50x50'}}" alt=""></td>
                 <td>{{$comment->email}}</td>

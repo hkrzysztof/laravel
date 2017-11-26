@@ -29,7 +29,6 @@ Route::group(['middleware'=>'admin'], function (){
     Route::resource('admin/comments', 'PostCommentsController');
     Route::resource('admin/comments/replies', 'CommentRepliesController');
 
-//    Route::get('admin/media/upload', ['as'=>'admin.media.upload', 'uses'=>'AdminMediaController@store']);
 
     Route::get('/admin', function (){
         return view('admin.index');

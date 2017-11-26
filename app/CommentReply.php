@@ -15,7 +15,7 @@ class CommentReply extends Model
         'body'
     ];
 
-    public function replies(){
+    public function comment(){
         return $this->belongsTo('App\Comment');
     }
 }
