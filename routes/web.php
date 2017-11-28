@@ -15,11 +15,10 @@ Auth::routes();
 
 Route::get('/logout', 'Auth\LoginController@logout');
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'WelcomeController@index');
 
-Route::get('/post/{id}', ['as'=>'home.post', 'uses'=>'AdminPostsController@post']);
+
+Route::get('/post/{id}', ['as'=>'home.post', 'uses'=>'WelcomeController@post']);
 
 Route::group(['middleware'=>'admin'], function (){
     Route::resource('admin/users', 'AdminUsersController', ['names'=>[

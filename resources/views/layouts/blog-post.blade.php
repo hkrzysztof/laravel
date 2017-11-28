@@ -51,6 +51,9 @@
                 <li>
                     <a href="#">Contact</a>
                 </li>
+                <li>
+                    <a href="/admin">Admin panel</a>
+                </li>
             </ul>
         </div>
         <!-- /.navbar-collapse -->
@@ -73,19 +76,19 @@
         <!-- Blog Sidebar Widgets Column -->
         <div class="col-md-4">
 
-            <!-- Blog Search Well -->
-            <div class="well">
-                <h4>Blog Search</h4>
-                <div class="input-group">
-                    <input type="text" class="form-control">
-                    <span class="input-group-btn">
-                            <button class="btn btn-default" type="button">
-                                <span class="glyphicon glyphicon-search"></span>
-                        </button>
-                        </span>
-                </div>
-                <!-- /.input-group -->
-            </div>
+            {{--<!-- Blog Search Well -->--}}
+            {{--<div class="well">--}}
+                {{--<h4>Blog Search</h4>--}}
+                {{--<div class="input-group">--}}
+                    {{--<input type="text" class="form-control">--}}
+                    {{--<span class="input-group-btn">--}}
+                            {{--<button class="btn btn-default" type="button">--}}
+                                {{--<span class="glyphicon glyphicon-search"></span>--}}
+                        {{--</button>--}}
+                        {{--</span>--}}
+                {{--</div>--}}
+                {{--<!-- /.input-group -->--}}
+            {{--</div>--}}
 
             <!-- Blog Categories Well -->
             <div class="well">
@@ -129,7 +132,7 @@
     <footer>
         <div class="row">
             <div class="col-lg-12">
-                <p>Copyright &copy; Your Website 2014</p>
+                <p>Copyright &copy; Hid 2017</p>
             </div>
         </div>
         <!-- /.row -->
