@@ -14,4 +14,5 @@ It's a social media blog with a full CMS. Developed in Laravel 5.5 in PhpStorm I
 7. Put the obtained key in APP_KEY in .env file
 8. Fill in DB_DATABASE, DB_USERNAME, DB_PASSWORD in .env file
 9. run ```npm install``` in the app folder terminal to install all dependencies
+10. run ```php artisan migrate```
 10. Ready to use
